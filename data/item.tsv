@@ -1,7 +1,7 @@
-name	category	qty	price
+name	category	price
 Red Apple	red	1000	1.50
-Green Apple	green	1000	1.75
-Blue Apple	blue	500	25
-Yellow Banana	yellow	1000	1.25
-Green Banana	green	1500	1
-Blue Banana	blue	200	400
+Blue Apple	blue	25
+Blue Banana	blue	400
+Green Apple	green	1.75
+Green Banana	green	1
+Yellow Banana	yellow	1.25

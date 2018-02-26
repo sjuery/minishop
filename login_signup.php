@@ -8,7 +8,6 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="./css/login.css">
 </head>
 <body>
-	<?php echo $_SESSION['create_ret']; $_SESSION['create_ret'] = ""; ?>
 	<form class="box" action="create_account.php" method="post">
 	<h1>
 		Username: <input class="textbox" type="text" name="username"/>

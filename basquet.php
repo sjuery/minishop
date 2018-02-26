@@ -1,19 +1,43 @@
+<?php
+session_start();
+$fd = fopen("./data/basquet.tsv", "r");
+$_SESSION['basquet'] = array();
+$basquet_key = explode("\t", fgets($fd));
+for ($n = 0; ($line = fgets($fd)) !== false; $n++) 
+{
+	$tmp = explode("\t", $line);
+	$_SESSION['basquet'][$n] = array();
+	foreach ($tmp as $key => $value)
+		$_SESSION['basquet'][$n][trim($basquet_key[$key])] = $value;
+}
+?>
+
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="./css/menu.css">
 	<title>Basquet</title>
 </head>
 <body>
-	<table>
-		<td>
-			<figure><img src="https://greatist.com/sites/default/files/styles/fb-1200x630/public/wp-content/uploads/2011/11/Apples.jpg?itok=Cqn_I8Ms">
-			<figcaption class="info"><p>Red Apples<br><strong class="price">1.50$ per</strong></p>
-		</td>
-	</table>
+<?php
+	foreach ($_SESSION['basquet'] as $basquet)
+	{
+		if ($basquet['username'] === $_SESSION['login'])
+		{
+			echo "
+			<table>
+				<td>
+					<strong>item:".$basquet['item']."<br /><br />
+					<strong>qty: ".$basquet['qty']." EA</strong></p>
+					<strong>price: $".$item['price']."</strong></p>
+				</td>
+			</table>";
+		}
+	}
+?>
 	<table>
 		<td>
 			<figure><img src="http://www.charbase.com/images/glyph/10763">
-			<figcaption class="info"><p>Total Cost<br><strong class="price">X$</strong></p>
+			<figcaption class="info"><p>Total Cost<br><strong class="price">$<?php echo $_SESSION['total'];?></strong></p>
 		</td>
 	</table>
 </body>

@@ -116,7 +116,7 @@ if (!empty($_POST['category']))
 					<figure><img src=\"https://greatist.com/sites/default/files/styles/fb-1200x630/public/wp-content/uploads/2011/11/Apples.jpg?itok=Cqn_I8Ms\">
 					<figcaption class=\"info\"><p>Red Apple<br /><br />
 					<strong class=\"price\">price: $".$item['price']." per</strong></p>
-					<input type=\"number\" name=\"Red Apple\">
+					<input type=\"number\" name=\"Red Apple\" value=\"0\">
 					<input type=\"submit\" value=\"Add to basquet\"></figcaption></figure>
 				</td>
 			</table>";
@@ -129,7 +129,7 @@ if (!empty($_POST['category']))
 					<figure><img src=\"https://sc01.alicdn.com/kf/UT8NWONXFVXXXagOFbXA/Fresh-Green-apples.jpg\">
 					<figcaption class=\"info\"><p>Green Apple<br /><br />
 					<strong class=\"price\">price: $".$item['price']." per</strong></p>
-					<input type=\"number\" name=\"Green Apple\">
+					<input type=\"number\" name=\"Green Apple\" value=\"0\">
 					<input type=\"submit\" value=\"Add to basquet\"></figcaption></figure>
 				</td>
 			</table>";
@@ -142,7 +142,7 @@ if (!empty($_POST['category']))
 					<figure><img src=\"https://img.aws.livestrongcdn.com/ls-article-image-673/ds-photo/getty/article/103/51/457512575.jpg\">
 					<figcaption class=\"info\"><p>Green Banana<br>
 					<strong class=\"price\">price: $".$item['price']." per</strong></p>
-					<input type=\"number\" name=\"Green Banana\">
+					<input type=\"number\" name=\"Green Banana\" value=\"0\">
 					<input type=\"submit\" value=\"Add to basquet\"></figcaption></figure>
 				</td>
 			</table>";
@@ -155,7 +155,7 @@ if (!empty($_POST['category']))
 					<figure><img src=\"https://c2.staticflickr.com/4/3365/3421750128_04e11ca4e1_b.jpg\">
 					<figcaption class=\"info\"><p>Blue Apple<br /><br />
 					<strong class=\"price\">price: $".$item['price']." per</strong></p>
-					<input type=\"number\" name=\"Blue Apple\">
+					<input type=\"number\" name=\"Blue Apple\" value=\"0\">
 					<input type=\"submit\" value=\"Add to basquet\"></figcaption></figure>
 				</td>
 			</table>";
@@ -168,7 +168,7 @@ if (!empty($_POST['category']))
 					<figure><img src=\"https://cdn3.volusion.com/lcezu.ypudg/v/vspfiles/photos/bluebanana-3.jpg?1403955729\">
 					<figcaption class=\"info\"><p>Blue Banana<br /><br />
 					<strong class=\"price\">price: $".$item['price']." per</strong></p>
-					<input type=\"number\" name=\"Blue Banana\">
+					<input type=\"number\" name=\"Blue Banana\" value=\"0\">
 					<input type=\"submit\" value=\"Add to basquet\"></figcaption></figure>
 				</td>
 			</table>";
@@ -181,7 +181,7 @@ if (!empty($_POST['category']))
 					<figure><img src=\"http://ikaland.hu/sites/default/files/pictures/banan.jpg\">
 					<figcaption class=\"info\"><p>Yellow Banana<br /><br />
 					<strong class=\"price\">price: $".$item['price']." per</strong></p>
-					<input type=\"number\" name=\"Yellow Banana\">
+					<input type=\"number\" name=\"Yellow Banana\" value=\"0\">
 					<input type=\"submit\" value=\"Add to basquet\"></figcaption></figure>
 				</td>
 			</table>";
