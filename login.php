@@ -1,72 +1,38 @@
-#!/usr/bin/php
 <?php
 
 session_start();
 
-/*
-**	'r+' read/write
-**	'w+' read/write (truncate)
-** 	'a+' read/write (append)
-*/
-$fd_account = fopen("./data/account.tsv", "");
-$fd_basket = fopen("./data/basket.tsv", "");
-$fd_item = fopen("./data/item.tsv", "");
-if (!$fd_account | !$fd_basket | !$fd_item)
-	return false;
-else
-{
-	$_SESSION['account'] = array[];
-	$_SESSION['basket'] = array[];
-	$_SESSION['item'] = array[];
-}
-
-//	account open/read
-
+$fd_account = fopen("./data/account.tsv", "r");
+$_SESSION['account'] = array();
+$account_key = explode("\t", fgets($fd_account));
 for ($n = 0; ($line = fgets($fd_account)) !== false; $n++) 
 {
 	$tmp = explode("\t", $line);
-	$_SESSION['account'][$n] = array[];
-	for ($tmp as $i => $value)
-		$_SESSION['account'][$n][$i] = $value;
+	$_SESSION['account'][$n] = array();
+	foreach ($tmp as $key => $value)
+		$_SESSION['account'][$n][$account_key[$key]] = $value;
 }
 
-//	basket open/read
-
-for ($n = 0; ($line = fgets($fd_basket)) !== false; $n++) 
+foreach ($_SESSION['account'] as $account)
 {
-	$tmp = explode("\t", $line);
-	$_SESSION['basket'][$n] = array[];
-	for ($tmp as $i => $value)
-		$_SESSION['basket'][$n][$i] = $value;
-}
-
-//	item open/read
-
-for ($n = 0; ($line = fgets($fd_item)) !== false; $n++) 
-{
-	$tmp = explode("\t", $line);
-	$_SESSION['item'][$n] = array[];
-	for ($tmp as $i => $value)
-		$_SESSION['item'][$n][$i] = $value;
-}
-
-//	delete account
-
-foreach ($_SESSION['account'] as $id)
-{
-	if ($id['login'] == $target)
+	if ($account['username'] === $_POST['username'])
 	{
-		array_splice($_SESSION['account'], $id);
-		if (!($fd = fopen("./data/account.tsv", "wr")))
-			return false;
-		$len = count($_SESSION['account'][0]);
-		foreach ($_SESSION['account'] as $i => $val)
+		if ($account['passwd'] === $_POST['passwd'])
 		{
-			if ($i < $len - 1)
-				fwrite($fd, $val."\t");
-			else
-				fwrite($fd, $val."\n");
+			$_SESSION['login'] = $_POST['username'];
+			header('Location: index.php');
+			exit ;
+		}
+		else
+		{
+			$_SESSION['login_ret'] = "wrong passwd";
+			header('Location: login_user.php');
+			exit ;
 		}
 	}
 }
+
+$_SESSION['login_ret'] = "login doesn't exist";
+header('Location: login_user.php');
+exit;
 ?>
