@@ -7,7 +7,6 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="./css/login.css">
 </head>
 <body>
-	<?php echo $_SESSION['login_ret']; $_SESSION['ogin_ret'] = ""; ?>
 	<form class="box" action="login.php" method="post">
 	<h1>
 		UserName: <input class="textbox" type="text" name="username"/><BR />

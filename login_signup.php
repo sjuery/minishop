@@ -26,7 +26,7 @@ session_start();
 		<input class="button" type="submit" value="Finish Signup" style="color:white"/>
 	</h1>
 	</form>
-	<form action="./menu.php">
+	<form action="./index.php">
 		<input class="button1" type="submit" value="Back To Main Menu" style="color:white">
 	</form>
 	<form action="./login_user.php">

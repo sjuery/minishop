@@ -1,16 +1,13 @@
 <?php
 session_start();
-
-foreach ($_SESSION['account'] as $account)
+foreach ($_SESSION['admin'] as $admin)
 {
-	if ($_POST['username'] === "admin")
-		break ;
-	if ($account['username'] === $_POST['username'])
+	if ($admin['username'] === $_POST['username'])
 	{
-		if ($account['passwd'] === $_POST['passwd'])
+		if ($admin['passwd'] === $_POST['passwd'])
 		{
 			$_SESSION['login'] = $_POST['username'];
-			header('Location: index.php');
+			header('Location: admin_setting.php');
 			exit ;
 		}
 		else
