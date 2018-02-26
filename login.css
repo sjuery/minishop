@@ -1,0 +1,54 @@
+h1
+{
+    margin : auto;
+    top: 50px;
+    position : relative;
+    left : 25px;
+    font-size:25px;
+}
+
+body
+{
+   background-color: #C0D6E4;
+}
+
+.box
+{
+    background-color : rgba(1,81,121,.9);
+    width : 95%;
+    height : 80%;
+    left : 50%;
+    margin-top : 25px;
+    margin-left: 35px;
+    border-radius : 25px;
+}
+
+.textbox
+{
+    background-color : rgba(0,0,0,.3);
+    width : 750px;
+    height : 25px;
+    margin : auto;
+    position : relative;
+    float: right;
+    right: 40px;
+}
+
+.button
+{
+    position : relative;
+    background-color : rgba(0,0,0,0);
+    top : 40px;
+    left  :40px;
+    width: 20%;
+    height: 10%;
+}
+
+.button1
+{
+    position : relative;
+    background-color : rgba(1,81,121,.9);
+    left : 80px;
+    width: 20%;
+    height: 10%;
+}
