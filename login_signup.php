@@ -8,9 +8,10 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="./css/login.css">
 </head>
 <body>
+	<?php echo $_SESSION['create_ret']; $_SESSION['create_ret'] = ""; ?>
 	<form class="box" action="create_account.php" method="post">
 	<h1>
-		Username: <input class="textbox" type="text" name="user"/>
+		Username: <input class="textbox" type="text" name="username"/>
 		<br />
 		Password: <input class ="textbox" type="password" name="passwd"/>
 		<br />
@@ -18,7 +19,7 @@ session_start();
 		<br />
 		Name: <input class ="textbox" type="text" name="name"/>
 		<br />
-		Surname: <input class ="textbox" type="text" name="sur"/>
+		Surname: <input class ="textbox" type="text" name="surname"/>
 		<br />
         Home Address: <input class ="textbox" type="text" name="addr"/>
 		<br />
