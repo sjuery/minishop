@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>User Change Info</title>
-	<link rel="stylesheet" type="text/css" href="./login.css">
+	<link rel="stylesheet" type="text/css" href="./css/login.css">
 </head>
 <body>
 	<form class="box">

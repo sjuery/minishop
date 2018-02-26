@@ -25,10 +25,10 @@ session_start();
 		<input class="button" type="submit" value="Finish Signup" style="color:white"/>
 	</h1>
 	</form>
-	<form action="menu.html">
+	<form action="./menu.php">
 		<input class="button1" type="submit" value="Back To Main Menu" style="color:white">
 	</form>
-	<form action="login_user.html">
+	<form action="./login_user.php">
 		<input class="button1" type="submit" value="Sign In" style="color:white">
 	</form>
 </div>
