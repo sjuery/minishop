@@ -37,6 +37,6 @@ foreach ($_POST as $value)
 	$i++;
 }
 
-header('Location: menu.php');
+header('Location: index.php');
 exit;
 ?>

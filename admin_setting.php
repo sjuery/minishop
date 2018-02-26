@@ -9,10 +9,10 @@ session_start();
 </head>
 <body>
 	<div class="box">
-	<form action="edit_item.php" method="post">
+	<form action="admin_item.php" method="post">
 		<input class="button" type="submit" value="Edit Item" style="color:white"/>
 	</form>
-	<form action="edit_user.php" method="post">
+	<form action="admin_user.php" method="post">
 		<input class="button" type="submit" value="Edit User" style="color:white"/>
 	</form>
 	<form action="admin_logout.php" method="post">

@@ -4,16 +4,25 @@ session_start();
 
 <html>
 <head>
-	<title>Admin Login</title>
+	<title>Edit Users</title>
 	<link rel="stylesheet" type="text/css" href="./css/login.css">
 </head>
 <body>
 	<form class="box" action="admin.php" method="post">
-	<h1>
-		Admin: <input class="textbox" type="text" name="username"/><BR />
-		Password: <input class ="textbox" type="password" name="passwd"/><BR />
-		<input class="button" type="submit" value="Login As Admin" style="color:white"/>
-	</h1>
+		<h1>
+			User Edit
+		</h1>
+		<?php
+		foreach ($_SESSION['account'] as $account)
+		{
+			echo "
+			<h1>
+			<input class=\"button\" type=\"submit\" value=\"Delete User - ".$account['username']."\" style=\"color:white\">
+			</h1>
+			<br />
+			";
+		}
+		?>
 	</form>
 	<form action="./index.php">
 		<input class="button1" type="submit" value="Back To Main Menu" style="color:white">
